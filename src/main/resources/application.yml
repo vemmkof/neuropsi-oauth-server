@@ -7,7 +7,7 @@ spring:
   application:
     name: neuropsi-oauth-service
   profiles:
-    active: ${PROFILE:prod}
+    active: ${PROFILE:dev}
   security:
     user:
       name: ${NAME:name}
