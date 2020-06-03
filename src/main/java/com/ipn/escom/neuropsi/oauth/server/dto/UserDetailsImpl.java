@@ -3,18 +3,22 @@ package com.ipn.escom.neuropsi.oauth.server.dto;
 import com.ipn.escom.neuropsi.oauth.server.entity.User;
 import lombok.Builder;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.stream.Collectors;
 
 @Builder
 public class UserDetailsImpl implements UserDetails {
 
-    private User user;
+    private final User user;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return Arrays.asList(user.getRole()).stream()
+                .map(role -> new SimpleGrantedAuthority(role.toString())).collect(Collectors.toList());
     }
 
     @Override
