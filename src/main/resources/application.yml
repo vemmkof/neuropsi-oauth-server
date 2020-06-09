@@ -10,7 +10,7 @@ spring:
     active: ${PROFILE:dev}
   security:
     user:
-      name: ${NAME:name}
+      name: ${USERNAME:username}
       password: ${PASSWORD:password}
     oauth:
       clientId: vueNeuropsi
