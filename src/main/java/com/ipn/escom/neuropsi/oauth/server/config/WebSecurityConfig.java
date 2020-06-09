@@ -74,6 +74,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         DefaultTokenServices defaultTokenServices = new DefaultTokenServices();
         defaultTokenServices.setTokenStore(getTokenStore(dataSource));
         defaultTokenServices.setSupportRefreshToken(true);
+        defaultTokenServices.setTokenEnhancer(getJwtAccessTokenConverter());
         return defaultTokenServices;
     }
 }

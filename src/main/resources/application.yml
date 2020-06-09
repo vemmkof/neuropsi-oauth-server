@@ -19,6 +19,10 @@ spring:
       refreshTokenValiditySeconds: 9600
       scopes: read,write
       grantTypes: password,refresh_token
+    oauth2:
+      resourceserver:
+        jwt:
+
 eureka:
   client:
     service-url:
