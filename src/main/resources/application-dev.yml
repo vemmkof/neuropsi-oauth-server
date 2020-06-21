@@ -1,8 +1,19 @@
 spring:
   datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
-    username: sa
-    password: sa
+    type: org.apache.tomcat.jdbc.pool.DataSource
+    url: jdbc:mysql://localhost:3306/neuropsi?reconnect=true&useSSL=false&serverTimezone=UTC
+    username: vemm
+    password: abc123??
+    initialization-mode: NEVER
+    tomcat:
+      initial-size: 2
+      max-wait: 20000
+      max-active: 3
+      max-idle: 3
+      min-idle: 2
+      default-auto-commit: true
   jpa:
+    hibernate:
+      ddl-auto: none
     open-in-view: true
+    show-sql: true
