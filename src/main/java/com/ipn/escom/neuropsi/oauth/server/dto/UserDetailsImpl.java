@@ -1,6 +1,6 @@
 package com.ipn.escom.neuropsi.oauth.server.dto;
 
-import com.ipn.escom.neuropsi.oauth.server.entity.User;
+import com.ipn.escom.neuropsi.commons.entity.User;
 import lombok.Builder;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
 @Builder
 public class UserDetailsImpl implements UserDetails {
 
+    private static final long serialVersionUID = -560423666058377695L;
     private final User user;
 
     @Override

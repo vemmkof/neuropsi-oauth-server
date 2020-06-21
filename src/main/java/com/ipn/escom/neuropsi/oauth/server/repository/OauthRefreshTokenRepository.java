@@ -1,6 +1,6 @@
 package com.ipn.escom.neuropsi.oauth.server.repository;
 
-import com.ipn.escom.neuropsi.oauth.server.entity.OauthRefreshToken;
+import com.ipn.escom.neuropsi.commons.entity.OauthRefreshToken;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
 package com.ipn.escom.neuropsi.oauth.server.service;
 
+import com.ipn.escom.neuropsi.commons.entity.User;
 import com.ipn.escom.neuropsi.oauth.server.dto.UserDetailsImpl;
-import com.ipn.escom.neuropsi.oauth.server.entity.User;
 import com.ipn.escom.neuropsi.oauth.server.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
