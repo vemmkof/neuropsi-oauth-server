@@ -4,7 +4,7 @@ spring:
     url: jdbc:mysql://localhost:3306/neuropsi?reconnect=true&useSSL=false&serverTimezone=UTC
     username: vemm
     password: abc123??
-    initialization-mode: NEVER
+    initialization-mode: ALWAYS
     tomcat:
       initial-size: 2
       max-wait: 20000
@@ -14,6 +14,6 @@ spring:
       default-auto-commit: true
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: create
     open-in-view: true
     show-sql: true
